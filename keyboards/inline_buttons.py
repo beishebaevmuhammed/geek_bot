@@ -75,4 +75,3 @@ async def start_3questionnaire_keyboard():
     markup.add(question8_button)
     markup.add(question9_button)
     return markup
-

@@ -1,6 +1,9 @@
+import sqlite3
+
+
 from aiogram import Dispatcher, types
-from config import bot
 from const import START_MENU_TEXT
+from config import bot, MEDIA_DESTINATION
 from database.sql_commands import Database
 from keyboards.inline_buttons import start_menu_keyboard
 
@@ -21,6 +24,17 @@ async def start_button(message: types.Message):
         ),
         reply_markup=await start_menu_keyboard()
     )
+
+    with open(MEDIA_DESTINATION + "geek_bot.jpg", 'rb') as photo:
+        await bot.send_photo(
+            chat_id=message.from_user.id,
+            photo=photo,
+            caption=START_MENU_TEXT.format(
+                user=message.from_user.first_name
+            ),
+            reply_markup=await start_menu_keyboard(),
+            parse_mode=types.ParseMode.MARKDOWN
+        )
 
 
 def register_start_handlers(dp: Dispatcher):
