@@ -3,3 +3,6 @@
 .bot.sqlite3
 /__pycache__
 venv
+/keyboards/__pycache__/
+handlers/__pycache__/
+database/__pycache__/
