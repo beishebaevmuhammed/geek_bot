@@ -7,7 +7,13 @@ async def start_menu_keyboard():
         "Начинать",
         callback_data="Start_questionnaire"
     )
+
+    registration_button = InlineKeyboardButton(
+        "Регистрация❤️",
+        callback_data="регистрация"
+    )
     markup.add(questionnaire_button)
+    markup.add(registration_button)
     return markup
 
 
@@ -48,11 +54,11 @@ async def start_2questionnaire_keyboard():
         callback_data="Asus Chromebook Flip CX5"
     )
 
-
     markup.add(question4_button)
     markup.add(question5_button)
     markup.add(question6_button)
     return markup
+
 
 async def start_3questionnaire_keyboard():
     markup = InlineKeyboardMarkup()
