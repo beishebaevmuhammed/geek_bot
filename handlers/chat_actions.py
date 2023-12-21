@@ -11,7 +11,7 @@ async def chat_messages(message: types.Message):
     if message.chat.id == int(GROUP_ID):
         ban_word_predict_prob = predict_prob([message.text])
         print(ban_word_predict_prob)
-        if ban_word_predict_prob[0] > 0.5:
+        if ban_word_predict_prob[0] > 0.6:
             user = db.sql_select_ban_user(
                 tg_id=message.from_user.id
             )
@@ -31,7 +31,7 @@ async def chat_messages(message: types.Message):
                     await bot.ban_chat_member(
                         chat_id=message.chat.id,
                         user_id=message.from_user.id,
-                        until_date=datetime.now() + timedelta(seconds=100)
+                        # until_date=datetime.now() + timedelta(seconds=100)
                     )
             else:
                 db.sql_update_ban_user_count(

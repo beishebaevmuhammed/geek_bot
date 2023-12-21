@@ -42,11 +42,7 @@ class Database:
 
     def sql_update_ban_user_count(self, tg_id):
         self.cursor.execute(
-            sql_queries.UPDATE_BAN_USER_QUERY,
+            sql_queries.UPDATE_BAN_USER_COUNT_QUERY,
             (tg_id,)
         )
         self.connection.commit()
-
-
-
-
