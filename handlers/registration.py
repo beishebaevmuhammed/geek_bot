@@ -1,11 +1,8 @@
 from aiogram import types, Dispatcher
-from aiogram.dispatcher.filters import state
-from aiogram.types import message
+from aiogram.dispatcher import FSMContext
+from aiogram.dispatcher.filters.state import State, StatesGroup
 
 from config import bot, MEDIA_DESTINATION
-from aiogram.dispatcher.filters.state import State, StatesGroup
-from aiogram.dispatcher import FSMContext
-
 from const import PROFILE_TEXT
 from database.sql_commands import Database
 
@@ -79,8 +76,9 @@ async def load_age(message: types.Message,
 
     await RegistrationStates.next()
 
+
 async def load_gender(message: types.Message,
-                         state: FSMContext):
+                      state: FSMContext):
     async with state.proxy() as data:
         data['gender'] = message.text
         print(data)
@@ -92,8 +90,9 @@ async def load_gender(message: types.Message,
 
     await RegistrationStates.next()
 
+
 async def load_city(message: types.Message,
-                         state: FSMContext):
+                    state: FSMContext):
     async with state.proxy() as data:
         data['city'] = message.text
         print(data)
@@ -104,6 +103,7 @@ async def load_city(message: types.Message,
     )
 
     await RegistrationStates.next()
+
 
 async def load_relationship_status(message: types.Message,
                                    state: FSMContext):
@@ -118,8 +118,9 @@ async def load_relationship_status(message: types.Message,
 
     await RegistrationStates.next()
 
+
 async def load_photo(message: types.Message,
-                                   state: FSMContext):
+                     state: FSMContext):
     db = Database()
     print(message.photo)
     path = await message.photo[-1].download(
@@ -156,7 +157,7 @@ async def load_photo(message: types.Message,
             text='Ты успешно зарегистрировался👍'
         )
 
-        await  state.finish()
+        await state.finish()
 
 
 def register_registration_handlers(dp: Dispatcher):

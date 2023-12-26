@@ -1,7 +1,6 @@
 from aiogram import types, Dispatcher
 from config import bot, GROUP_ID, ADMIN_ID
 from profanity_check import predict_prob
-from datetime import timedelta, datetime
 
 from database.sql_commands import Database
 

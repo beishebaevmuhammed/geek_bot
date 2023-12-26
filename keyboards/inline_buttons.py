@@ -12,8 +12,19 @@ async def start_menu_keyboard():
         "Регистрация❤️",
         callback_data="регистрация"
     )
+
+    profile_button = InlineKeyboardButton(
+        "My profile️",
+        callback_data="my_profile️"
+    )
+    view_profile_button = InlineKeyboardButton(
+        "View Profiles 👍🏻👎🏻",
+        callback_data="random_profile"
+    )
     markup.add(questionnaire_button)
     markup.add(registration_button)
+    markup.add(profile_button)
+    markup.add(view_profile_button)
     return markup
 
 
@@ -80,4 +91,34 @@ async def start_3questionnaire_keyboard():
     markup.add(question7_button)
     markup.add(question8_button)
     markup.add(question9_button)
+    return markup
+
+
+async def like_dislike_keyboard(owner_tg_id):
+    markup = InlineKeyboardMarkup()
+    like_button = InlineKeyboardButton(
+        "LIKE 👍🏻",
+        callback_data=f"like_{owner_tg_id}"
+    )
+    dislike_button = InlineKeyboardButton(
+        "DISLIKE 👎🏻",
+        callback_data="random_profile"
+    )
+    markup.add(like_button)
+    markup.add(dislike_button)
+    return markup
+
+
+async def my_profile_keyboard():
+    markup = InlineKeyboardMarkup()
+    update_button = InlineKeyboardButton(
+        "Update 🟢",
+        callback_data=f"update_profile"
+    )
+    delete_button = InlineKeyboardButton(
+        "Delete ❌",
+        callback_data="delete_profile"
+    )
+    markup.add(update_button)
+    markup.add(delete_button)
     return markup

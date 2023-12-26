@@ -3,6 +3,22 @@
 .bot.sqlite3
 /__pycache__
 venv
+media
 /keyboards/__pycache__/
 handlers/__pycache__/
 database/__pycache__/
+__pycache__
+media/photos
+keyboards/__pycache__/
+/handlers/__pycache__/
+keyboards/__pycache__/inline_buttons.cpython-39.pyc
+media/photos/file_1.jpg
+media/photos/file_2.jpg
+media/photos/file_4.jpg
+media/photos/file_5.jpg
+handlers/__pycache__/questionnaire.cpython-39.pyc
+handlers/__pycache__/start.cpython-39.pyc
+database/__pycache__/sql_commands.cpython-39.pyc
+modified:   database/__pycache__/sql_queries.cpython-39.pyc
+
+
