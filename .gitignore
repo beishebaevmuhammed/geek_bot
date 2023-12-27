@@ -4,13 +4,13 @@
 /__pycache__
 venv
 media
-/__pycache__/reference.cpython-39.pyc
-/__pycache__/registration.cpython-39.pyc
-/handlers/__pycache__/profile.cpython-39.pyc
+handlers/__pycache__/reference.cpython-39.pyc
+handlers/__pycache__/registration.cpython-39.pyc
+handlers/__pycache__/profile.cpython-39.pyc
 /handlers/__pycache__/__init__.cpython-39.pyc
 /handlers/__pycache__/chat_actions.cpython-39.pyc
 /handlers/__pycache__/questionnaire.cpython-39.pyc
 /handlers/__pycache__/start.cpython-39.pyc
 bot.sqlite3
-
+/handlers/__pycache__/
 
