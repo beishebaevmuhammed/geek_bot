@@ -6,7 +6,7 @@ from handlers import (
     chat_actions,
     registration,
     profile,
-    reference
+    reference,
 )
 from database import sql_commands
 

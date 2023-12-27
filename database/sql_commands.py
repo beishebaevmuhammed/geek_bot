@@ -165,10 +165,10 @@ class Database:
             (link,)
         ).fetchone()
 
-    def sql_insert_referral(self, owner_telegram_id, referral, first_name):
+    def sql_insert_referral(self, owner_id, referral_id, first_name):
         self.cursor.execute(
             sql_queries.INSERT_REFERRAL_QUERY,
-            (None, owner_telegram_id, referral, first_name)
+            (None, owner_id, referral_id, first_name)
         )
         self.connection.commit()
 

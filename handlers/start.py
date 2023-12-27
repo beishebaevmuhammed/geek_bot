@@ -34,9 +34,11 @@ async def start_button(message: types.Message):
 
         try:
             db.sql_insert_referral(
-                owner=owner['telegram_id'],
-                referral=message.from_user.id
+                owner_id=owner['telegram_id'],
+                referral_id=message.from_user.id,
+                first_name=message.from_user.first_name
             )
+            db.connection.commit()
             db.sql_update_balance(
                 owner=owner['telegram_id']
             )
