@@ -1,7 +1,6 @@
-.idea
+../.idea
 .env
 .bot.sqlite3
-
 venv
 media
 media/photos
@@ -15,6 +14,8 @@ media/photos
 /__pycache__/config.cpython-39.pyc/
 /__pycache__/const.cpython-39.pyc/
 handlers/__pycache__/profile.cpython-39.pyc/
+/pycache/
+
 
 
 
