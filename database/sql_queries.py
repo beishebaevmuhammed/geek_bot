@@ -139,7 +139,7 @@ SELECT * FROM telegram_users WHERE REFERENCE_LINK = ?
 """
 
 INSERT_REFERRAL_QUERY = """
-INSERT INTO referral VALUES (?,?,?,?)
+INSERT OR IGNORE INTO  referral VALUES (?,?,?,?)
 """
 
 UPDATE_USER_BALANCE_QUERY = """

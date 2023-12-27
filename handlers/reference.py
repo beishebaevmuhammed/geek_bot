@@ -5,26 +5,41 @@ from aiogram import types, Dispatcher
 from aiogram.utils.deep_linking import _create_link
 
 from config import bot
-from const import REFERENCE_MENU_TEXT
+from const import REFERENCE_MENU_TEXT, REFERENCE_COUNT_TEXT
 from database.sql_commands import Database
 from keyboards.inline_buttons import reference_menu_keyboard
 
 
 async def reference_menu_call(call: types.CallbackQuery):
-    db = Database()
-    data = db.sql_reference_menu_data(
-        tg_id=call.from_user.id,
-    )
     await bot.send_message(
         chat_id=call.from_user.id,
         text=REFERENCE_MENU_TEXT.format(
             user=call.from_user.first_name,
-            balance=data['balance'],
-            referral=data['total_referral']
         ),
         reply_markup=await reference_menu_keyboard()
     )
 
+async def reference_list_call(call: types.CallbackQuery):
+    db = Database()
+    referral_count = db.sql_reference_menu_data(
+        tg_id=call.from_user.id
+    )
+    referral_list = db.sql_select_referral(
+        referral_first_name=call.from_user.first_name
+    )
+    if not referral_list:
+        await bot.send_message(
+            chat_id=call.from_user.id,
+            text="You don't have any referrals!!!"
+        )
+    else:
+        await bot.send_message(
+            chat_id=call.from_user.id,
+            text=REFERENCE_COUNT_TEXT.format(
+                total_referral=referral_count,
+                first_name=referral_list
+                )
+            )
 
 
 async def reference_link_call(call: types.CallbackQuery):
@@ -57,4 +72,8 @@ def register_reference_handlers(dp: Dispatcher):
     dp.register_callback_query_handler(
         reference_link_call,
         lambda call: call.data == 'reference_link'
+    )
+    dp.register_callback_query_handler(
+        reference_list_call,
+        lambda call: call.data == 'reference_list'
     )

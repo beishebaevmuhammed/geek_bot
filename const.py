@@ -8,9 +8,8 @@ PROFILE_TEXT = "*Никнейм:* {nickname}\n" \
                "*Город:* {city}\n" \
                "*Статус отношений:* {relationship_status}"
 REFERENCE_MENU_TEXT = "Greets in our Reference menu! {user}!\n"\
-                      "Here is ur balance: {balance}\n"\
-                      "Total referrals: {referral}\n"\
                       "Thank you for using reference menu"
 
-
+REFERENCE_COUNT_TEXT = "Count referrals: {total_referral}\n"\
+                       "{first_name}"
 
