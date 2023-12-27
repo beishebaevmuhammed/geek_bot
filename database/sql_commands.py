@@ -104,10 +104,10 @@ class Database:
         )
         self.connection.commit()
 
-    def sql_update_profile(self, nickname, bio, age, gender, photo,city, relationship_status, tg_id):
+    def sql_update_profile(self, nickname, bio, age, gender, photo, city, relationship_status, tg_id):
         self.cursor.execute(
             sql_queries.UPDATE_PROFILE_QUERY,
-            (nickname, bio, age, gender,city, relationship_status, photo, tg_id,)
+            (nickname, bio, age, gender, city, relationship_status, photo, tg_id,)
         )
         self.connection.commit()
 

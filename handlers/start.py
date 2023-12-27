@@ -28,7 +28,7 @@ async def start_button(message: types.Message):
         if owner['telegram_id'] == message.from_user.id:
             await bot.send_message(
                 chat_id=message.from_user.id,
-                text="U cant use own reference link!!!"
+                text="Вы не можете использовать собственную ссылочную ссылку!!!"
             )
             return
 

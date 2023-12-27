@@ -20,5 +20,9 @@ handlers/__pycache__/questionnaire.cpython-39.pyc
 handlers/__pycache__/start.cpython-39.pyc
 database/__pycache__/sql_commands.cpython-39.pyc
 modified:   database/__pycache__/sql_queries.cpython-39.pyc
-
+database/sql_commands.py
+handlers/start.py
+modified:   database/sql_commands.py
+modified:   handlers/__pycache__/start.cpython-39.pyc
+modified:   handlers/start.py
 
