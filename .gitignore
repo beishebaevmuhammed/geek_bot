@@ -1,18 +1,20 @@
 .idea
 .env
 .bot.sqlite3
-/__pycache__
+
 venv
 media
 media/photos
-/handlers/__pycache__/
-/database/__pycache__/
 /keyboards/__pycache__/
-__init__.cpython-39.pyc
-chat_actions.cpython-39.pyc
-questionnaire.cpython-39.pyc
-reference.cpython-39.pyc
-registration.cpython-39.pyc
-start.cpython-39.pyc
+/handlers/__pycache__/__init__.cpython-39.pyc/
+/handlers/__pycache__/chat_actions.cpython-39.pyc/
+/handlers/__pycache__/questionnaire.cpython-39.pyc/
+/handlers/__pycache__/reference.cpython-39.pyc/
+/handlers/__pycache__/registration.cpython-39.pyc/
+/handlers/__pycache__/start.cpython-39.pyc/
+/__pycache__/config.cpython-39.pyc/
+/__pycache__/const.cpython-39.pyc/
+handlers/__pycache__/profile.cpython-39.pyc/
+
 
 
