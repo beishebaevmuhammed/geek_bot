@@ -25,4 +25,7 @@ handlers/start.py
 modified:   database/sql_commands.py
 modified:   handlers/__pycache__/start.cpython-39.pyc
 modified:   handlers/start.py
+bot.sqlite3
+
+
 
