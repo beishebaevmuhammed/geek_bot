@@ -1,5 +1,5 @@
 from aiogram import types
-from scraper.scraper import NewsScraper
+from scraper import NewsScraper
 
 
 async def scrape_news(call: types.CallbackQuery):
