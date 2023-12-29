@@ -22,7 +22,7 @@ async def my_profile_call(call: types.CallbackQuery):
                 photo=photo,
                 caption=PROFILE_TEXT.format(
                     nickname=profile['nickname'],
-                    bio=profile['bio'],
+                    biography=profile['biography'],
                     age=profile['age'],
                     gender=profile['gender'],
                     city=profile['city'],
@@ -51,7 +51,7 @@ async def random_profile_call(call: types.CallbackQuery):
                 photo=photo,
                 caption=PROFILE_TEXT.format(
                     nickname=random_profile['nickname'],
-                    biography=random_profile['bio'],
+                    biography=random_profile['biography'],
                     age=random_profile['age'],
                     gender=random_profile['gender'],
                     city=random_profile['city'],

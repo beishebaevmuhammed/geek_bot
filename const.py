@@ -1,7 +1,7 @@
-START_MENU_TEXT = "Приветствую Тебя, дорогой мой {user}\n" \
+START_MENU_TEXT = "Приветствую Тебя, {user}\n" \
                   "Я geek_bot, которого Вы начали создавать"
 PROFILE_TEXT = "*Никнейм:* {nickname}\n" \
-               "*Биография:* {bio}\n" \
+               "*Биография:* {biography}\n" \
                "*Возраст:* {age}\n" \
                "*Твой пол:* {gender}\n" \
                "*Город:* {city}\n" \

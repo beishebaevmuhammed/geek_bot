@@ -63,12 +63,14 @@ class Database:
         )
         self.connection.commit()
 
+
+
     def sql_select_profile(self, tg_id):
         self.cursor.row_factory = lambda cursor, row: {
             "id": row[0],
             "telegram_id": row[1],
             "nickname": row[2],
-            "bio": row[3],
+            "biography": row[3],
             "age": row[4],
             "gender": row[5],
             "city": row[6],
@@ -85,7 +87,7 @@ class Database:
             "id": row[0],
             "telegram_id": row[1],
             "nickname": row[2],
-            "bio": row[3],
+            "biography": row[3],
             "age": row[4],
             "gender": row[5],
             "city": row[6],
@@ -104,10 +106,10 @@ class Database:
         )
         self.connection.commit()
 
-    def sql_update_profile(self, nickname, bio, age, gender, photo, city, relationship_status, tg_id):
+    def sql_update_profile(self, nickname, biography, age, gender, photo, city, relationship_status, tg_id):
         self.cursor.execute(
             sql_queries.UPDATE_PROFILE_QUERY,
-            (nickname, bio, age, gender, city, relationship_status, photo, tg_id,)
+            (nickname, biography, age, gender, city, relationship_status, photo, tg_id,)
         )
         self.connection.commit()
 
