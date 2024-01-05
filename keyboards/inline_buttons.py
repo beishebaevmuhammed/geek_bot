@@ -29,12 +29,17 @@ async def start_menu_keyboard():
         "Anime Menu",
         callback_data="anime_menu"
     )
+    parser_anime_button = InlineKeyboardButton(
+        "Anime parser",
+        callback_data='parser'
+    )
     markup.add(questionnaire_button)
     markup.add(registration_button)
     markup.add(profile_button)
     markup.add(view_profile_button)
     markup.add(reference_button)
     markup.add(scraper_menu_button)
+    markup.add(parser_anime_button)
     return markup
 
 

@@ -1,25 +1,29 @@
-/.idea
+.idea
 .env
-.bot.sqlite3
+bot.sqlite3
 .venv
 media
 media/photos
-/keyboards/__pycache__/
-/handlers/__pycache__/__init__.cpython-39.pyc/
-/handlers/__pycache__/chat_actions.cpython-39.pyc/
-/handlers/__pycache__/questionnaire.cpython-39.pyc/
-/handlers/__pycache__/reference.cpython-39.pyc/
-/handlers/__pycache__/registration.cpython-39.pyc/
-/handlers/__pycache__/start.cpython-39.pyc/
+requirements.txt
 /__pycache__/config.cpython-39.pyc/
 /__pycache__/const.cpython-39.pyc/
-handlers/__pycache__/profile.cpython-39.pyc/
-/pycache/
-bot.sqlite3
-requirements.txt
-/__pycache__/__init__.cpython-39.pyc/
-/__pycache__/scraper.cpython-39.pyc/
-/__init__.py/
+/database/__pycache__/__init__.cpython-39.pyc/
+         /database/__pycache__/sql_commands.cpython-39.pyc/
+           /database/__pycache__/sql_queries.cpython-39.pyc/
+           /handlers/__pycache__/__init__.cpython-39.pyc/
+         / handlers/__pycache__/chat_actions.cpython-39.pyc/
+           /handlers/__pycache__/new_handlers.cpython-39.pyc/
+           /handlers/__pycache__/profile.cpython-39.pyc/
+        /handlers/__pycache__/questionnaire.cpython-39.pyc/
+           /handlers/__pycache__/reference.cpython-39.pyc/
+          /handlers/__pycache__/registration.cpython-39.pyc/
+           /handlers/__pycache__/start.cpython-39.pyc/
+           /handlers/new_handlers.py/
+scraper/scraper.py
+keyboards/__pycache__/
+idea
+venv
+__pycache__
 
 
 
