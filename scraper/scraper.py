@@ -2,7 +2,7 @@ from parsel import Selector
 import requests
 
 
-class NewsScraper:
+class AnimeScraper:
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept-Language': 'en-US,en;q=0.5',
@@ -22,5 +22,5 @@ class NewsScraper:
 
 
 if __name__ == '__main__':
-    scraper = NewsScraper()
+    scraper = AnimeScraper()
     print(scraper.parse_data_anime())
