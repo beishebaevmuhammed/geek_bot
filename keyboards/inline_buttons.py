@@ -25,32 +25,30 @@ async def start_menu_keyboard():
         "Reference Menu",
         callback_data="reference_menu"
     )
-<<<<<<< HEAD
-    scraper_menu_button = InlineKeyboardButton(
-        "Anime Menu",
-        callback_data="anime_menu"
-    )
-    parser_anime_button = InlineKeyboardButton(
-        "Anime parser",
-        callback_data='parser'
-    )
-=======
-      scraper_menu_button = InlineKeyboardButton(
-        "Anime Menu",
-        callback_data="anime_menu"
-    )
->>>>>>> 7f0b2c8e494c134e5b9ee9951f6ab95c6cc3b696
     markup.add(questionnaire_button)
     markup.add(registration_button)
     markup.add(profile_button)
     markup.add(view_profile_button)
     markup.add(reference_button)
-    markup.add(scraper_menu_button)
-<<<<<<< HEAD
-    markup.add(parser_anime_button)
-=======
->>>>>>> 7f0b2c8e494c134e5b9ee9951f6ab95c6cc3b696
     return markup
+    # scraper_menu_button = InlineKeyboardButton(
+    #     "Anime Menu",
+    #     callback_data="anime_menu"
+    # )
+    # parser_anime_button = InlineKeyboardButton(
+    #     "Anime parser",
+    #     callback_data='parser'
+    # )
+    # scraper_menu_button = InlineKeyboardButton(
+    #     "Anime Menu",
+    #     callback_data="anime_menu"
+    # )
+
+
+
+# markup.add(scraper_menu_button)
+# markup.add(parser_anime_button)
+
 
 
 async def start_1questionnaire_keyboard():
@@ -147,6 +145,7 @@ async def my_profile_keyboard():
     markup.add(update_button)
     markup.add(delete_button)
     return markup
+
 
 async def reference_menu_keyboard():
     markup = InlineKeyboardMarkup()
